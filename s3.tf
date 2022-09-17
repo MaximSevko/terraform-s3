@@ -1,10 +1,5 @@
-
-resource "aws_s3_bucket" "bucket" {
-  bucket = "testbucket1326"
-  }
-
 resource "aws_s3_bucket_lifecycle_configuration" "bucket-config" {
-  bucket = aws_s3_bucket.bucket.bucket
+  bucket = "testbucket15431"
 
   rule {
     id = "all-delete-after-90-days"
