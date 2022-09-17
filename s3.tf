@@ -1,6 +1,6 @@
 
 resource "aws_s3_bucket" "bucket" {
-  bucket = "maxim_bucket1"
+  bucket = "maximbucket1"
   }
 
 resource "aws_s3_bucket_lifecycle_configuration" "bucket-config" {
