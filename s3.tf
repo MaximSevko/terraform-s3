@@ -2,14 +2,7 @@
 resource "aws_s3_bucket" "bucket" {
   bucket = "testbucket1326"
   
-  lifecycle_rule {
-    id = "Expiration Rule"
-    enabled = true
-
-  expiration {
-    days = 30
-    }
-  }
+  lifecycle_rule = aws_s3_bucket_lifecycle_configuration.bucket-config
 }
 
 resource "aws_s3_bucket_lifecycle_configuration" "bucket-config" {
