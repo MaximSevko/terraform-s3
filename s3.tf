@@ -1,9 +1,7 @@
 
 resource "aws_s3_bucket" "bucket" {
   bucket = "testbucket1326"
-  
-  lifecycle_rule = aws_s3_bucket_lifecycle_configuration.bucket-config
-}
+  }
 
 resource "aws_s3_bucket_lifecycle_configuration" "bucket-config" {
   bucket = aws_s3_bucket.bucket.bucket
